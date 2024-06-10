@@ -14,7 +14,7 @@ const generateReport = async (req: Request, res: Response) => {
       { header: 'Start Time', key: 'startTime', width: 25 },
       { header: 'End Time', key: 'endTime', width: 25 },
       { header: 'Actual Hours', key: 'actualHours', width: 25 },
-      { header: 'Assigned Shift Hours', key: 'assignedShiftHours', width: 25 },
+      
     ];
 
     shifts.forEach((shift) => {
@@ -23,7 +23,7 @@ const generateReport = async (req: Request, res: Response) => {
         startTime: shift.startTime,
         endTime: shift.endTime,
         actualHours: shift.actualHours,
-        assignedShiftHours: shift.assignedShiftHours,
+        
       });
     });
 

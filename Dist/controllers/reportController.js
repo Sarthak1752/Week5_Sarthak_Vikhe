@@ -25,7 +25,6 @@ const generateReport = (req, res) => __awaiter(void 0, void 0, void 0, function*
             { header: 'Start Time', key: 'startTime', width: 25 },
             { header: 'End Time', key: 'endTime', width: 25 },
             { header: 'Actual Hours', key: 'actualHours', width: 25 },
-            { header: 'Assigned Shift Hours', key: 'assignedShiftHours', width: 25 },
         ];
         shifts.forEach((shift) => {
             worksheet.addRow({
@@ -33,7 +32,6 @@ const generateReport = (req, res) => __awaiter(void 0, void 0, void 0, function*
                 startTime: shift.startTime,
                 endTime: shift.endTime,
                 actualHours: shift.actualHours,
-                assignedShiftHours: shift.assignedShiftHours,
             });
         });
         res.setHeader('Content-Type', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
